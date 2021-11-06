@@ -1,0 +1,23 @@
+{
+  "name": "ossblocks",
+  "version": "0.1.0",
+  "description": "Open Source Software Blocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgunzelman88/ossblocks.git"
+  },
+  "keywords": [
+    "Crafting",
+    "game"
+  ],
+  "author": "jeff.gunzelman",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jgunzelman88/ossblocks/issues"
+  },
+  "homepage": "https://github.com/jgunzelman88/ossblocks#readme"
+}
