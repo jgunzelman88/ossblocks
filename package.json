@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/jgunzelman88/ossblocks/issues"
   },
-  "homepage": "https://github.com/jgunzelman88/ossblocks#readme"
+  "homepage": "https://github.com/jgunzelman88/ossblocks#readme",
+  "dependencies": {
+    "@types/babylonjs": "^2.4.1",
+    "@types/uuid": "^8.3.1",
+    "babylonjs": "^4.2.0",
+    "rollup": "^2.59.0",
+    "uuid": "^8.3.2"
+  }
 }
