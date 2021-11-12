@@ -16,12 +16,13 @@ export class BlockRegistry {
      */
     public static registerBasicBlock(block: Block): Error | void {
         if (block.type != BlockType.BASIC) {
-            if (this.labelIndex.has(block.label)) {
-                let id = uuidv4()
-                BlockRegistry.basicBlocks.set(id, block)
-                BlockRegistry.labelIndex.set(block.label, id)
-            }else{
+            if (BlockRegistry.labelIndex.has(block.label)) {
                 return Error(`Basic blocks must have a unique label ${block.label} is already in use`)
+            }else if(BlockRegistry.basicBlocks.has(block.id)){
+                return Error(`Basic blocks must have a Id ${block.id} is already in use. Block ids 0-1024 are reservered. It is recommended you use a guid for your id`)
+            }else{
+                BlockRegistry.basicBlocks.set(block.id, block)
+                BlockRegistry.labelIndex.set(block.label, block.id)
             }
         } else {
             return Error('BlockType was not set to BASIC, please use registerInstanceBlock for INSTANCE blocks')
