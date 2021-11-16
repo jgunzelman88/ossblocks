@@ -1,4 +1,6 @@
+import { Chunk } from "./chunk";
+
 export class World{
     public id?: string
-    public chunks?: number[][][];
+    public chunks: Array<Chunk> = new Array();
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "craco test --roots test/ --testMatch '**/*.test.ts'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

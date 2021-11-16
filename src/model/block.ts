@@ -1,6 +1,14 @@
+import { Scene } from "babylonjs"
+
 export enum BlockType {
     "BASIC", // Basic blocks are all the same.
     "INSTANCE" // Instance blocks are unique.
+}
+
+export type BlockInstance = {
+    block: Block
+    x: number
+    z: number
 }
 /**
  * Block is the smallest unit of contruction
@@ -9,20 +17,12 @@ export class Block {
     public id: string
     public type: BlockType
     public label: string
-    public render?: Function
-
-    constructor(id: string, type: BlockType, label: string,
-        render?: Function){
+    
+    constructor(id: string, type: BlockType, label: string){
         this.id = id
         this.type = type
         this.label = label
-        
     }
-}
 
-export const Bedrock : Block = 
-{
-    id: '0',
-    type : BlockType.BASIC,
-    label : 'bedrock'
+    public render(scene: Scene, x: number, y: number, z: number){}
 }

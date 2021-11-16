@@ -1,12 +1,23 @@
-export const CHUCK_SIZE = 32
-export class Chunk{
-    
-    public id: number
-    public blocks?: number[][][];
-    public location: number[];
+import { Block, BlockInstance } from "./block"
 
-    constructor(id: number, location: number[]){
+export const CHUNK_SIZE = 32
+
+export type Plane = {
+    level: number
+    blocks: BlockInstance[]
+}
+export class Chunk {
+
+    public id: number
+    public planes: Plane[] = new Array()
+    public x: number
+    public y: number
+    public z: number
+
+    constructor(id: number, x: number, y: number, z: number) {
         this.id = id
-        this.location = location
+        this.x = x
+        this.y = y
+        this.z = z
     }
 }
